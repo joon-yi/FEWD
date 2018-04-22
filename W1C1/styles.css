@@ -1,0 +1,49 @@
+body {
+    background-color: #07639D;
+/*    background: linear-gradient(#07639D, #0582D0);
+    background-repeat: no-repeat;*/
+    
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    text-shadow: 4px 4px #043B5E;
+    font-family: Georgia;
+    font-size: 40px;
+    color: #fff;
+}
+
+p{
+	font-family: arial;
+    font-size: 16px; 
+	max-width: 600px;
+    color: #fff;
+    padding: 20px;
+    border: 1px solid #043B5E;
+    box-shadow: 4px 4px #043B5E;
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    margin-top: 70px;
+}
+
+/*
+
+√-text shadow 
+-margin
+√-background
+√-font
+√-font size
+√-box-shadow
+
+-bonus:
+√1) add an image
+√2) change the background
+√3) add a paragraph of lorem ipsum
+
+*/

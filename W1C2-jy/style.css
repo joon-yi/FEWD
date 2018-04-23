@@ -38,6 +38,8 @@ div {
 	margin: 0 auto;
 	border-top: 1px solid #000;
 	border-bottom: 5px solid #000;
+	overflow: auto; /* study this more --> float: left;  */
+
 }
 
 span {
@@ -45,8 +47,7 @@ span {
 	text-align: left;
 
 	background-color: orange;
-	/*display: inline-block;*/
-	display: block;
+  	float: left;
 }
 
 .social {

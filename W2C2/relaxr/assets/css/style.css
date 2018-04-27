@@ -87,11 +87,19 @@ p.lg-text, .lg-text li {
 ----------------------------------------------------*/
 
 #header {
-	height: 700px;
 	background-image: url("../images/header_bg.jpg");
-	background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+	height: 100vh;
 	text-align:center;
+	padding: 0 20px;
+/*
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+*/
+
 }
 
 

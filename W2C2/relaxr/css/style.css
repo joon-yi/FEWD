@@ -87,7 +87,7 @@ p.lg-text, .lg-text li {
 ----------------------------------------------------*/
 
 #header {
-	background-image: url("../images/header_bg.jpg");
+	background-image: url("../img/header_bg.jpg");
     background-size: cover;
     background-position: center;
 	height: 100vh;
@@ -118,7 +118,7 @@ p.lg-text, .lg-text li {
 
 #testimonial {
 	height: 350px;
-	background-image: url("../images/testimonial_bg.jpg");
+	background-image: url("../img/testimonial_bg.jpg");
 	background-repeat: no-repeat;
     background-size: cover;
 }

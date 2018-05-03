@@ -1,6 +1,204 @@
-/*** LET THE FUN BEGINNNNNNN   ****/
-/* Write css below this line */
+
+/* Colors
+-------------------------------
+yellow: #f9e42e
+navy: #052f48
+
+*/
+
+
+/* Global
+------------------------------- */
+
+html {
+ box-sizing: border-box;
+}
+
+*,* :before, *:after {
+ box-sizing: inherit;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #efefef;
+}
+
+h1 {
+	font-size: 34px;
+	font-weight: 500;
+    color: #052f48;
+    padding: 0 0 30px 0;
+    line-height: 40px;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: 800;
+    color: #052f48;
+}
+
+
+/* Header
+------------------------------- */
+header {
+	height: 100px;
+	background-color: #052f48;
+}
+
+nav {
+	overflow: auto;
+}
+
+nav ul li {
+	display: inline-block;
+	float: right;
+	margin-top: 30px;
+}
+
+nav ul li a {
+	font-size: 22px;
+	font-weight: 100;
+	margin: 10px;
+	color: #f9e42e;
+	text-decoration: none;
+}
+
+#logo {
+	float: left;
+	font-size: 38px;
+	font-weight: 800;
+	padding: 30px;
+    color: #fff;
+}
+
+
+/* Container
+------------------------------- */
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: auto;
+
+}
+
+/* Left
+................................*/
+.content_left {
+	float: left;
+	width: 70%;
+	padding: 15px;
+}
+
+p, .categories ul, a {
+	font-size: 20px;
+	font-weight: 100px;
+	line-height: 36px;
+	padding: 20px 0;
+}
+
+.learn_more, .read_more {
+    color: #052f48;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.read_more {
+	float: right;
+}
+
+.article_1_img img {
+	padding: 20px 0;
+	width: 100%;
+}
+
+
+/* Right
+................................*/
+.content_right {
+	float: left;
+	width: 30%;
+	padding: 70px 15px;
+}
+
+.about {
+	overflow: auto;
+}
+
+.article_1 p::first-letter { 
+    font-size: 330%;
+    display: block;
+    float: left;
+    padding: 17px 10px 5px 0;
+}
+
+.article_1 {
+	padding: 50px 0;
+	border-bottom: 1px solid #666;
+	overflow: auto;
+}
+
+.ad-unit {
+	margin: 40px 0;
+}
+
+
+/* Sign up
+------------------------------- */
+#signup {
+	padding: 0px 0;
+	background-color: #f9e42e;
+	text-align:center;
+}
+
+
+/* Footer
+------------------------------- */
+#footer {
+	padding: 30px 0;
+	background-color: #2E2E2E;
+	text-align: center;
+}
+
+#footer h2 {
+	color: #f9e42e;
+}
+
+#footer ul {
+	margin: 30px 0;
+}
+
+#footer li {
+	display: inline-block;
+}
+
+#footer li a {
+	margin: 30px 10px
+}
+
+#copyright {
+	font-size: 13px;
+	font-weight: 100;
+    color: #efefef;
+    margin-top: 30px;
+}
 
 
 
-/***********/
+.btn, .btn2 {
+    color: #052f48;
+    font-size: 17px;
+	font-weight: 900;
+	padding: 13px 46px;
+	border-radius: 3px;
+    background-color: #f9e42e;
+    text-transform: uppercase;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn2 {
+    color: #fff;
+    background-color: #052f48;
+}
+
+

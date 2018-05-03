@@ -78,8 +78,8 @@ nav ul li a {
 	width: 1200px;
 	margin: 0 auto;
 	overflow: auto;
-
 }
+
 
 /* Left
 ................................*/
@@ -106,8 +106,8 @@ p, .categories ul, a {
 	float: right;
 }
 
-.article_1_img img {
-	padding: 20px 0;
+.article_img img {
+	padding: 10px 0;
 	width: 100%;
 }
 
@@ -132,7 +132,7 @@ p, .categories ul, a {
 }
 
 .article_1 {
-	padding: 50px 0;
+	padding: 40px 0;
 	border-bottom: 1px solid #666;
 	overflow: auto;
 }
@@ -145,7 +145,8 @@ p, .categories ul, a {
 /* Sign up
 ------------------------------- */
 #signup {
-	padding: 0px 0;
+	margin-top: 50px;
+	padding: 30px 0;
 	background-color: #f9e42e;
 	text-align:center;
 }
@@ -183,7 +184,8 @@ p, .categories ul, a {
 }
 
 
-
+/* MISC
+------------------------------- */
 .btn, .btn2 {
     color: #052f48;
     font-size: 17px;

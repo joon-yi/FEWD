@@ -1,0 +1,173 @@
+
+/* Colors
+-------------------------------
+yellow: #f9e42e
+
+*/
+
+
+/* Global
+-------------------------------- */
+
+html {
+    box-sizing: border-box;
+}
+   *,* :before, *:after {
+    box-sizing: inherit;
+}
+   
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1, h2, #logo {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #000;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2, #logo {
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 20px 0;
+    
+}
+
+
+#logo {
+    color: #f9e42e;
+}
+
+/* Header
+-------------------------------- */
+header {
+	height: 100px;
+    background-color: #000;
+    padding: 20px;
+}
+
+nav {
+    text-align: right;
+  }
+
+nav a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    /* background: #ccc; */
+}
+
+
+/* Header
+-------------------------------- */
+.display-font {
+    text-align: center;
+    font-style: italic;
+    background: #999;
+    height: 70px;
+    padding-top: 20px;
+}
+.mid-line {
+    color: #666;
+    text-decoration: line-through;
+}
+.underline {
+    text-decoration: underline;
+    text-decoration-color: #f9e42e;
+}
+
+
+
+
+
+
+/* Main
+-------------------------------- */
+
+main {
+	height: 500px;
+	background-image: url("../img/coworking.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+}
+
+.main-text-box {
+    text-align: left;
+    padding: 30px 20px;
+    margin: 30px;
+    background: #fff;
+    width: 33%;  
+    min-height: auto;
+    opacity: .9;
+    border: 1px solid #666;
+    display: inline-block;
+}
+
+
+/* columns
+-------------------------------- */
+section {
+    padding: 40px 0;
+    overflow: auto;
+}
+
+.col {
+    width: 33.33%;
+    float: left;
+    display: inline;
+    background: #fff;
+    padding: 30px;
+    border-left: 1px solid #666;
+}
+
+section div:first-of-type {
+    border: none;
+}
+
+
+/* Footer
+-------------------------------- */
+footer {
+    columns: #fff;
+    padding: 5px 0 5px 20px;
+    color: #fff;
+    background: #000;
+}
+
+
+
+/* 
+-------------------------------- */
+
+.btn-1, .btn-2 {
+    color: #000;
+    font-size: 17px;
+	font-weight: 900;
+	padding: 10px 30px;
+	border-radius: 3px;
+    text-transform: uppercase;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 auto;
+}
+
+.btn-1 {
+    background-color: #f9e42e;
+}
+
+.btn-2 {
+    background-color: #ccc;
+}

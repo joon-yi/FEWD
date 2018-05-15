@@ -1,0 +1,16 @@
+Rock = 1
+Paper = 2
+Scissors = 3
+
+
+
+p1 - p2 = V
+
+If V = 1 or -2 then p1 wins
+
+If V = -1 or 2 then p2 wins
+
+If V = 0 then draw
+
+
+

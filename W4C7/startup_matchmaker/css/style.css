@@ -109,7 +109,7 @@ main {
     margin: 30px;
     background: #fff;
     width: 33%;  
-    min-height: auto;
+    /* min-height: 300px; */
     opacity: .9;
     border: 1px solid #666;
     display: inline-block;

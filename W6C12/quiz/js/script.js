@@ -1,13 +1,14 @@
 $(document).ready(function(){	
 
-	/****** QUESTION 1 ************/
-
+	/* QUESTION 1 ************/
+	
 	document.getElementById('return5th_submit').onclick = function(){
 			var text = document.getElementById('return5th_input').value;
 			document.getElementById('return5th_display').innerHTML = text.charAt(4);
 	}
 
-    /****** QUESTION 2 ************/
+
+    /* QUESTION 2 ************/
     // Same as above except output second to last char of a input string
 
 	document.getElementById('returnLast_submit').onclick = function(){
@@ -15,7 +16,8 @@ $(document).ready(function(){
 			document.getElementById('returnLast_display').innerHTML = text.charAt(text.length-2);
 	}
 
-	/****** QUESTION 3 ************/
+
+	/* QUESTION 3 ************/
 	// Check to see if a word exists in a hard-coded paragraph, display "YES" if found and "NO" if not
 
 	document.getElementById('checkWork_submit').onclick = function(){
@@ -34,7 +36,7 @@ $(document).ready(function(){
 		}
 	}
 
-	/****** QUESTION 4 ************/
+	/* QUESTION 4 ************/
 	// Reverse string inputted by user
 
 	document.getElementById('reverseString_submit').onclick = function() {
@@ -46,14 +48,14 @@ $(document).ready(function(){
 		for (var i = wordToReverse.length -1; i >= 0; i--) {
 			newString = newString + wordToReverse[i]; // or newString += wordToReverse[i];
 			document.getElementById('reverseString_display').innerHTML = newString;
-			// console.log(newString);
 		}		
 		// return newString;
 		// document.getElementById('reverseString_display').innerHTML = newString;
 
 	}   // reference: https://medium.freecodecamp.org/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb
 
-	/****** QUESTION 5 ************/
+
+	/* QUESTION 5 ************/
 	// Output HELLO WORLD into a div, but you must first store "hello world" into a variable and then output the variable
 
 	document.getElementById('helloworld_submit').onclick = function(){
@@ -63,7 +65,8 @@ $(document).ready(function(){
 	
 	}
 
-	/****** QUESTION 6 ************/
+
+	/* QUESTION 6 ************/
 	// Provide an input for user to type their name and greet them with their name "Hello BLANK, welcome to the website" should go in greet1 display
 
 	document.getElementById('greet1_submit').onclick = function(){
@@ -76,7 +79,8 @@ $(document).ready(function(){
 
 	}
 
-	/****** QUESTION 7 ************/
+
+	/* QUESTION 7 ************/
 	// Do the same as above but only greet them if their names are Alice, Bob, or YOUR NAME
 
 	document.getElementById('greet2_submit').onclick = function(){
@@ -89,26 +93,29 @@ $(document).ready(function(){
 
 	}
 
-	/****** QUESTION 8 ************/
+
+	/* QUESTION 8 ************/
 	// Accept two integers from the user and display the larger
 
 	document.getElementById('integerMax_submit').onclick = function(){
 
 		var num1 = document.getElementById('integerMax_input1').value;
 		var num2 = document.getElementById('integerMax_input2').value;
-		// console.log(typeof num1);
 
 		if ( num1 === num2 ) {
 			document.getElementById('integerMax_display').innerHTML = 'Equal value';
-		} else if ( num1 > num2) {
-			document.getElementById('integerMax_display').innerHTML = num1;
-		} else {
-			document.getElementById('integerMax_display').innerHTML = num2;
+		}
+		else if ( num1 > num2) {
+			document.getElementById('integerMax_display').innerHTML = 'Fisrt value ' + num1;
+		}
+		else {
+			document.getElementById('integerMax_display').innerHTML = 'Second value ' + num2;
 		}
 
 	}
 
-	/****** QUESTION 9 ************/
+
+	/* QUESTION 9 ************/
 	// Accept three integers from the user and display the SIGN of the product of the three (aka: display + or -)
 
 	document.getElementById('integerSign_submit').onclick = function(){
@@ -131,7 +138,7 @@ $(document).ready(function(){
 	}
 
 
-	/****** QUESTION 10 ************/
+	/* QUESTION 10 ************/
 	// Write a JavaScript program to sort three numbers. Display them in order from greatest to smallest
 
 	document.getElementById('integerSort_submit').onclick = function(){
@@ -141,69 +148,87 @@ $(document).ready(function(){
 		
 		// console.log(a,b,c);
 
+		function sort(){
+			if ( a = b ) {
+				if ( (a=c) && (b=c)){
+					return 'Equal value'
+				}
+			} 
 
 
-		// if ( a > b ) {
-		// 	if ( a > c && b > c ) {
-		// 		// LG:a, MD:b , SM:c;
-		// 		document.getElementById('integerSort_display').innerHTML = a;
-		// 	}
-		// 	// if ( a > c && b < c ){
-		// 	// 	// LG:a, MD:c, SM: b
-		// 	// 	document.getElementById('integerSort_display').innerHTML = a + c + b;
-		// 	// }
-		// }
-	
-	
-		// if ( a < b ) {
-		// 	if ( b > c && a > c ) {
-		// 		LG:b, MD:a , SM:c;
-		// 	} 
-		// 	if ( b > c && a < c ) {
-		// 		LG:b, MD:c , SM:a;
-		// 	}
-		// }
-		// if ( a === b ) {
-		// 	if ( a > c ) {
-		// 		LG: a, LG: b, SM: c;
-		// 	}
-		// 	if ( a < c ) {
-		// 		LG: c, SM: a, SM: b;
-		// 	} 
-		// 	if ( a === c ) {
-		// 		'all same value'
-		// 	}
-		// }
+		}
+		document.getElementById('integerSort_display').innerHTML = sort();
+
+
+
 
 
 	}
 
 
-
-	/****** QUESTION 11 ***********/
+	/* QUESTION 11 ***********/
 	// Write a function called play() to play rock, paper, scissors and output the winner (player 1 or player 2). This requires ressearch on how to make a function
 
+	document.getElementById('rps_submit').onclick = function(){
 
-	// document.getElementById('rps_submit').onclick = function(){
+		var player1 = document.getElementById('rps_player1').value.toUpperCase();
+		var player2 = document.getElementById('rps_player2').value.toUpperCase();
+			
+		function play(){	
+			if (player1 === player2) {
+				return "It's a tie!";
+			}
 
-	// 	var player1 = document.getElementById('rps_player1').value.toUpperCase();
-	// 	var player2 = document.getElementById('rps_player2').value.toUpperCase();
+			else if (player1 === "ROCK") {
+				if (player2 === "SCISSORS") {
+					return "Player 1 wins";
+				}
+				else {
+					return "Player 2 wins";
+				}
+			}
+			
+			else if (player1 === "PAPER") {
+				if (player2 === "ROCK") {
+					return "Player 1 wins";
+				}
+				else {
+					return "Player 2 wins";
+				}				
+			}
+			
+			else if (player1 === "SCISSORS") {
+				if (player2 === "ROCK") {
+					return "Player 1 wins";
+				}
+				else {
+					return "Player 2 win";
+				}
+			}	
+		}
+		document.getElementById('rps_winner_display').innerHTML = play();
 
-	// 	var rock = 1;
-	// 	var paper = 2;
-	// 	var scissor = 3;
+	}
+		
 
 
-	// }
-
-
-
-	/****** QUESTION 12 ***********/
+	/* QUESTION 12 ***********/
 	// Calculate the factoral of a number inputted by the user
 
+	document.getElementById('factoral_submit').onclick = function(){
+
+		var n = Number(document.getElementById("factoral_input").value);
+		var fact = 1;		
+		for ( i = 1; i <= n; i++ ) {
+			fact = fact * i;
+			console.log(fact);
+		}  
+		document.getElementById('factoral_display').innerHTML = fact;
+
+	}
 
 
-	/****** QUESTION 13 ***********/
+	/* QUESTION 13 ***********/
 	//Write a JavaScript program to construct the following pattern:
 	//*
 	//**
@@ -218,44 +243,63 @@ $(document).ready(function(){
 		for (i = 0; i < 5; i += 1) {
 			display = display + symbol + "<br>";
 			document.getElementById('star_display').innerHTML = display;
-
-			// document.getElementById('star_display').innerHTML = display * i; // NaN
 		}
 	
 	}
 
-	/****** QUESTION 14 ***********/
+
+	/* QUESTION 14 ***********/
 	//Write a function that multiplies a base by itself a certain number of times (exponent)
 
+	document.getElementById('base_exp_submit').onclick = function(){
+
+		var a = document.getElementById('base_input').value;
+		var b = document.getElementById('exp_input').value;
+
+		document.getElementById('base_exp_display').innerHTML = Math.pow(a, b);
+
+	}
 
 
-
-	/****** QUESTION 15 ***********/
+	/* QUESTION 15 ***********/
 	//Write a program that prints the numbers from 1 to 100. But for multiples of three print "Foo" instead of the number and for the multiples of five print "Bar". For numbers which are multiples of both three and five print "FooBar"
 
 
 	document.getElementById('foobar_submit').onclick = function(){
 
-		var numDisplay = "";
-		for (i = 0; i <= 25; i += 1) {
-			// numDisplay = numDisplay + i;
-			// document.getElementById('foobar_display').innerHTML = numDisplay;
-			numDisplay = numDisplay + i;
-
-			if ( i % 3 !== 0) {
-				document.getElementById('foobar_display').innerHTML = 'foo';
-
-			} else {
-				document.getElementById('foobar_display').innerHTML = numDisplay;
+		/* ATTEMPT 1, not working ******/
+		
+		// var numDisplay = "";
+		// for (i = 0; i <= 10; i += 1) {
+		// 	if ( i % 3 !== 0) {
+		// 		numDisplay = numDisplay + i + "<br>";
+		// 		document.getElementById('foobar_display').innerHTML = numDisplay;
+		// 	} else {
+		// 		document.getElementById('foobar_display').innerHTML = 'foo';
+		// 	}
 			
-			}
+		// }
 
+		/* ATTEMPT 2 ******/
+		var numDisplay = [];
+		for (i = 1; i <= 100; i += 1) {
+			if (i % 3 == 0) {
+				numDisplay[i] = 'Foo';
+			} else if (i % 5 == 0) {
+				numDisplay[i] = 'Bar';
+			} else if (i % 3 == 0 && i % 5 == 0 ) {
+				numDisplay[i] = 'FooBar';
+			} else {
+				numDisplay[i] = i;
+			}
 		}
-	
+		document.getElementById('foobar_display').innerHTML = numDisplay.slice(1,100);
+
 	}
 
 
-	/****** QUESTION 16 ***********/
+	/* QUESTION 16 ***********/
+
 	document.getElementById('arrayname_submit').onclick = function(){
 
 		var disciples = ['Matthew', 'Mark', 'Luke', 'John'];
@@ -264,13 +308,12 @@ $(document).ready(function(){
 			nameDisplay = nameDisplay + disciples[i] + "<br>";
 			document.getElementById('arrayname_display').innerHTML = nameDisplay;
 		}
-	
-	
+
 	}
 
 
-	/****** QUESTION 17 ***********/
-	document.getElementById('arrayname_submit').onclick = function(){
+	/* QUESTION 17 ***********/
+	document.getElementById('car_submit').onclick = function(){
 
 		var carProperties = [
 			{ 'Make'  : 'Ford' },
@@ -279,14 +322,19 @@ $(document).ready(function(){
 		];
 
 		// var carProperties = {
-		// 	'Make' : 2012,
-		// 	'Year' : 31,
-		// 	'Color' : 'Halloween'
+		// 	'Make' : 'Ford',
+		// 	'Year' : 2008,
+		// 	'Color' : 'Tan',
 		// };
 		
-		for (i = 0; i < carProperties.length; i += 1) {
+		for (i = 0; i <= carProperties.length; i += 1) {
 			console.log(carProperties[i]);
-			// document.getElementById('arrayname_display').innerHTML = carProperties[i];
+			
+			document.getElementById('car_display').innerHTML = carProperties[i];
 		}
 	}
+
+
+
+
 });	

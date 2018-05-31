@@ -22,18 +22,20 @@ $(document).ready(function(){
 
 	document.getElementById('checkWork_submit').onclick = function(){
 
-		var paragraph = 'Flexitarian sustainable VHS, ramps flannel lumbersexual shabby chic venmo man bun blue bottle plaid synth viral. Austin quinoa fap iPhone banjo 3 wolf moon. Franzen williamsburg street art knausgaard synth literally, mumblecore sriracha scenester direct trade banjo bitters ugh. Forage hammock tilde taxidermy. Meh VHS occupy, asymmetrical helvetica pop-up next level poutine normcore. Flannel banh mi skateboard readymade, asymmetrical gluten-free chicharrones microdosing health goth. Pinterest normcore freegan gastropub pug.';
-		// var paragraph = document.getElementById('check_paragraph').value;
-		// console.log(paragraph);
+		// var paragraph = 'Flexitarian sustainable VHS, ramps flannel lumbersexual shabby chic venmo man bun blue bottle plaid synth viral. Austin quinoa fap iPhone banjo 3 wolf moon. Franzen williamsburg street art knausgaard synth literally, mumblecore sriracha scenester direct trade banjo bitters ugh. Forage hammock tilde taxidermy. Meh VHS occupy, asymmetrical helvetica pop-up next level poutine normcore. Flannel banh mi skateboard readymade, asymmetrical gluten-free chicharrones microdosing health goth. Pinterest normcore freegan gastropub pug.';
+		var paragraph = document.getElementById('check_paragraph').innerHTML;
+
 
 		var word = document.getElementById('checkWork_input').value;
 		var checkWord = paragraph.indexOf(word);
 
-		if (checkWord > -1) {
-			document.getElementById('checkWork_display').innerHTML = 'YES';
-		} else {
+		if (checkWord === -1) {
 			document.getElementById('checkWork_display').innerHTML = 'NO';
+
+		} else {
+			document.getElementById('checkWork_display').innerHTML = 'YES';
 		}
+
 	}
 
 	/* QUESTION 4 ************/
@@ -99,8 +101,8 @@ $(document).ready(function(){
 
 	document.getElementById('integerMax_submit').onclick = function(){
 
-		var num1 = document.getElementById('integerMax_input1').value;
-		var num2 = document.getElementById('integerMax_input2').value;
+		var num1 = Number(document.getElementById('integerMax_input1').value);
+		var num2 = Number(document.getElementById('integerMax_input2').value);
 
 		if ( num1 === num2 ) {
 			document.getElementById('integerMax_display').innerHTML = 'Equal value';
@@ -120,18 +122,16 @@ $(document).ready(function(){
 
 	document.getElementById('integerSign_submit').onclick = function(){
 
-		var num1 = document.getElementById('integerSign_input1').value;
-		var num2 = document.getElementById('integerSign_input2').value;
-		var num3 = document.getElementById('integerSign_input3').value;
+		var num1 = Number(document.getElementById('integerSign_input1').value);
+		var num2 = Number(document.getElementById('integerSign_input2').value); 
+		var num3 = Number(document.getElementById('integerSign_input3').value);
 		var productOfThree = num1 * num2 * num3;
-
-		// console.log(productOfThree);
 
 		if ( productOfThree === 0 ) {
 			document.getElementById('integerSign_display').innerHTML = '0';
 		} else if ( productOfThree > 0) {
 			document.getElementById('integerSign_display').innerHTML = '+' + productOfThree;
-		} else {
+		} else {    
 			document.getElementById('integerSign_display').innerHTML = '-' + productOfThree;
 		}
 
@@ -142,27 +142,63 @@ $(document).ready(function(){
 	// Write a JavaScript program to sort three numbers. Display them in order from greatest to smallest
 
 	document.getElementById('integerSort_submit').onclick = function(){
-		var a = document.getElementById('integerSort_input1').value;
-		var b = document.getElementById('integerSort_input2').value;
-		var c = document.getElementById('integerSort_input3').value;
-		
-		// console.log(a,b,c);
-
-		function sort(){
-			if ( a = b ) {
-				if ( (a=c) && (b=c)){
-					return 'Equal value'
-				}
-			} 
-
-
+		var a = Number(document.getElementById('integerSort_input1').value);
+		var b = Number(document.getElementById('integerSort_input2').value);
+		var c = Number(document.getElementById('integerSort_input3').value);
+	
+		if ( a === b ) {
+			if ( a === c && b === c) {
+				return 'Equal value'
+			}
 		}
-		document.getElementById('integerSort_display').innerHTML = sort();
 
+		else if ( a > b ){
+			if ( a > c ){
+				if ( b > c ) {
+					var lg = a;
+					var md = b;
+					var sm = c;
+				}
+				else if ( b < c ){
+					var lg = a;
+					var md = c;
+					var sm = b;
+				}
+			}
+			else if ( a < c ) {
+				var lg = c;
+				var md = a;
+				var sm = b;
+			}
+		}
 
+		else if ( a < b ) {
+			if ( b > c ){
+				if ( a > c ){
+					var lg = b;
+					var md = a;
+					var sm = c;
+				}		
+				else if ( a < c ){
+					var lg = b;
+					var md = c;
+					var sm = a;
+				}
+			}
+			else if ( b < c ){
+				var lg = c;
+				var md = b;
+				var sm = a;
+			}
+		}
+		document.getElementById('integerSort_display').innerHTML = 'Largest ' + lg + ', Middle ' + md + ', Smallest ' + sm;
 
+		// document.getElementById('integerSort_display').innerHTML = 'largest ' + lg.toString() + md.toString() +sm.toString() ;
 
-
+		// var node = document.createElement("P");                 // Create a <li> node
+		// var textnode = document.createTextNode(lg);         
+		// node.appendChild(textnode);                              // Append the text to <li>
+		// document.getElementById("integerSort_display").appendChild(node);     // Append <li> to <ul> with id="myList"
 	}
 
 
@@ -234,17 +270,19 @@ $(document).ready(function(){
 	//**
 	//***
 	//****
-	//*****				
+	//*****
 
 	document.getElementById('star_submit').onclick = function(){
 
-		var symbol = '*';
+		var symbol = "";
 		var display = "";
+
 		for (i = 0; i < 5; i += 1) {
-			display = display + symbol + "<br>";
-			document.getElementById('star_display').innerHTML = display;
+			symbol += "*";
+			display += symbol + "<br>";
 		}
-	
+		document.getElementById('star_display').innerHTML = display;
+		
 	}
 
 
@@ -267,20 +305,6 @@ $(document).ready(function(){
 
 	document.getElementById('foobar_submit').onclick = function(){
 
-		/* ATTEMPT 1, not working ******/
-		
-		// var numDisplay = "";
-		// for (i = 0; i <= 10; i += 1) {
-		// 	if ( i % 3 !== 0) {
-		// 		numDisplay = numDisplay + i + "<br>";
-		// 		document.getElementById('foobar_display').innerHTML = numDisplay;
-		// 	} else {
-		// 		document.getElementById('foobar_display').innerHTML = 'foo';
-		// 	}
-			
-		// }
-
-		/* ATTEMPT 2 ******/
 		var numDisplay = [];
 		for (i = 1; i <= 100; i += 1) {
 			if (i % 3 == 0) {
@@ -298,7 +322,7 @@ $(document).ready(function(){
 	}
 
 
-	/* QUESTION 16 ***********/
+	// /* QUESTION 16 ***********/
 
 	document.getElementById('arrayname_submit').onclick = function(){
 
@@ -312,29 +336,19 @@ $(document).ready(function(){
 	}
 
 
-	/* QUESTION 17 ***********/
+	// /* QUESTION 17 ***********/
 	document.getElementById('car_submit').onclick = function(){
 
 		var carProperties = [
 			{ 'Make'  : 'Ford' },
 			{ 'Year'  : '2008' },
-			{ 'Color' : 'Tan'  },
-		];
-
-		// var carProperties = {
-		// 	'Make' : 'Ford',
-		// 	'Year' : 2008,
-		// 	'Color' : 'Tan',
-		// };
-		
+			{ 'Color' : 'Tan'  }
+        ];
+        
 		for (i = 0; i <= carProperties.length; i += 1) {
 			console.log(carProperties[i]);
-			
 			document.getElementById('car_display').innerHTML = carProperties[i];
 		}
 	}
-
-
-
 
 });	
